@@ -12,9 +12,13 @@ def main():
 
     while True:
         show_choices()
-        user_choice = int(input("What do you want to do? (1-4)\n"))
+        user_choice = input("What do you want to do? (1-4)\n")
+        if user_choice.isdigit():
+            choice = int(user_choice)
+        else:
+            print("Incorrect, choose between (1-4)\n")
 
-        if user_choice == 1:
+        if choice == 1:
 
             if not tasks:
                 print("Bro nothing is in tasks! Like lock in!!\n")
@@ -24,7 +28,7 @@ def main():
                 for index, elements in enumerate(tasks, start = 1):
                     print(f"{index}. {elements}\n")
 
-        elif user_choice == 2:
+        elif choice == 2:
             new_task = input("What task do you want to add\n")
 
             if new_task:
@@ -33,7 +37,7 @@ def main():
             else:
                 print("Bro actually add things\n")
 
-        elif user_choice == 3:
+        elif choice == 3:
             if not tasks:
                 print("Nothing in tasks to delete\n")
                 continue
@@ -53,12 +57,10 @@ def main():
             except ValueError:
                 print("Enter a valid number\n")
 
-        elif user_choice == 4:
+        elif choice == 4:
             print("thanks for caring bri\n")
             break
 
-        else:
-            print("Incorrect, choose between (1-4)\n")
 
 if __name__ == "__main__":
     main()
