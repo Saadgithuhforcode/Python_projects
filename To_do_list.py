@@ -1,4 +1,5 @@
 def show_choices():
+    # The choices given to the user
     print("|-----To Do List-----|")
     print("1. Show The Tasks")
     print("2. Assign tasks")
@@ -17,7 +18,8 @@ def main():
             choice = int(user_choice)
         else:
             print("Incorrect, choose between (1-4)\n")
-
+            break
+        
         if choice == 1:
 
             if not tasks:
