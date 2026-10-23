@@ -16,4 +16,5 @@ while True:
         print("It's a tie!")
     elif (user_input == "rock" and computer_choice == "scissors") or (user_input == "paper" and computer_choice == "rock") or (user_input == "scissors" and computer_choice == "paper"):
         print("You win!")
-    else:        print("You lose!")
+    else:   
+         print("You lose!")
