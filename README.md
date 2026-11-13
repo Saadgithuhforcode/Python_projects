@@ -1,1 +1,1 @@
-yooo chat so this is the python project thing. 
+The python projects repo, for projects I did or might do.
